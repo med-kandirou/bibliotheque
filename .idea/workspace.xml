@@ -4,15 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="second commit">
-      <change afterPath="$PROJECT_DIR$/Database/database.sql" afterDir="false" />
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="third commit">
+      <change afterPath="$PROJECT_DIR$/src/models/Emprunt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/Emprunteur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/exemplaire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/livre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Database/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestion bibliotheque.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gestion bibliotheque.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -44,14 +57,19 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YC/Desktop/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/YC/IdeaProjects/gestion bibliotheque/database/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -64,7 +82,10 @@
       <option name="presentableId" value="Default" />
       <updated>1693557573492</updated>
       <workItem from="1693557574508" duration="539000" />
-      <workItem from="1693558129684" duration="1299000" />
+      <workItem from="1693558129684" duration="5447000" />
+      <workItem from="1693566957455" duration="870000" />
+      <workItem from="1693574220962" duration="54000" />
+      <workItem from="1693574286237" duration="1057000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -82,7 +103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693557798018</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="third commit">
+      <option name="closed" value="true" />
+      <created>1693559755393</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1693559755393</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="third commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="third commit" />
   </component>
 </project>
