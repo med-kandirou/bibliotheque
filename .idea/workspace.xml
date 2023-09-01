@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="add database class">
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="update database class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +85,7 @@
       <workItem from="1693566957455" duration="870000" />
       <workItem from="1693574220962" duration="54000" />
       <workItem from="1693574286237" duration="1712000" />
-      <workItem from="1693576056896" duration="3359000" />
+      <workItem from="1693576056896" duration="7048000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -135,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693577177327</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update database class">
+      <option name="closed" value="true" />
+      <created>1693581398370</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693581398370</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +178,7 @@
     <MESSAGE value="third commit" />
     <MESSAGE value="update structure commit" />
     <MESSAGE value="add database class" />
-    <option name="LAST_COMMIT_MESSAGE" value="add database class" />
+    <MESSAGE value="update database class" />
+    <option name="LAST_COMMIT_MESSAGE" value="update database class" />
   </component>
 </project>
