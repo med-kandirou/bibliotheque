@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="update database class">
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="singlton implementation">
+      <change afterPath="$PROJECT_DIR$/src/interfaces/EmprunteurInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/ExamplaireInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interfaces/LivreInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Emprunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Emprunt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Emprunteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Emprunteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Exemplaire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Livre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -85,7 +91,8 @@
       <workItem from="1693566957455" duration="870000" />
       <workItem from="1693574220962" duration="54000" />
       <workItem from="1693574286237" duration="1712000" />
-      <workItem from="1693576056896" duration="7048000" />
+      <workItem from="1693576056896" duration="7525000" />
+      <workItem from="1693656201963" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -143,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693581398370</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="singlton implementation">
+      <option name="closed" value="true" />
+      <created>1693592690262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693592690263</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +194,7 @@
     <MESSAGE value="update structure commit" />
     <MESSAGE value="add database class" />
     <MESSAGE value="update database class" />
-    <option name="LAST_COMMIT_MESSAGE" value="update database class" />
+    <MESSAGE value="singlton implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="singlton implementation" />
   </component>
 </project>
