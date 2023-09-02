@@ -8,7 +8,7 @@ public class Exemplaire {
     public enum Statut { Disponible, Emprunte, Perdu }
 
     // Private static instance variable to hold the single instance of Exemplaire
-    private static Exemplaire uniqueInstance;
+    private static Exemplaire Instance;
 
     // Private constructor to prevent external instantiation
     private Exemplaire(int id, Statut statut) {
@@ -18,10 +18,10 @@ public class Exemplaire {
 
     // Public method to provide access to the single instance (Singleton)
     public static Exemplaire getInstance(int id, Statut statut) {
-        if (uniqueInstance == null) {
-            uniqueInstance = new Exemplaire(id, statut);
+        if (Instance == null) {
+            Instance = new Exemplaire(id, statut);
         }
-        return uniqueInstance;
+        return Instance;
     }
 
     // Other methods and attributes as needed

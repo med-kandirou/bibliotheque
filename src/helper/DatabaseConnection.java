@@ -1,4 +1,4 @@
-package Database;
+package helper;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -21,7 +21,7 @@ public class DatabaseConnection {
         }
         return instance;
     }
-    public static Connection connect() {
+    public Connection connect() {
         Properties prop = new Properties();
         try (FileInputStream input = new FileInputStream("config.properties")) {
             prop.load(input);
@@ -37,6 +37,15 @@ public class DatabaseConnection {
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
             throw new RuntimeException(e);
+        }
+    }
+    public void close() {
+        if (this.connect() != null) {
+            try {
+                this.connect().close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

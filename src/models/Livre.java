@@ -1,5 +1,9 @@
 package models;
 
+import interfaces.LivreInterface;
+
+import java.util.List;
+
 public class Livre {
     private String isbn;
     private String titre;
@@ -8,6 +12,8 @@ public class Livre {
 
     // Singleton instance
     private static Livre instance;
+
+    public Livre(){}
 
     // Private constructor to prevent external instantiation
     private Livre(String isbn, String titre, String auteur, int quantite) {
@@ -18,20 +24,17 @@ public class Livre {
     }
 
     // Public method to get the Singleton instance
-    public static Livre getInstance(String isbn, String titre, String auteur, int quantite) {
+    public static Livre getInstance() {
         if (instance == null) {
-            instance = new Livre(isbn, titre, auteur, quantite);
+            instance = new Livre();
         }
         return instance;
     }
 
     // Getters and setters for other attributes
-
-    // You can add getters and setters for the attributes as needed
     public String getIsbn() {
         return isbn;
     }
-
     public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
@@ -39,23 +42,18 @@ public class Livre {
     public String getTitre() {
         return titre;
     }
-
     public void setTitre(String titre) {
         this.titre = titre;
     }
-
     public String getAuteur() {
         return auteur;
     }
-
     public void setAuteur(String auteur) {
         this.auteur = auteur;
     }
-
     public int getQuantite() {
         return quantite;
     }
-
     public void setQuantite(int quantite) {
         this.quantite = quantite;
     }
