@@ -5,7 +5,7 @@ CREATE TABLE livre (
     isbn VARCHAR(13) PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
     auteur VARCHAR(255),
-    quntite int
+    quantite int
 );
 
 CREATE TABLE exemplaire (

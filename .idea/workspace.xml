@@ -4,16 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="add attribut and constructors">
-      <change afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="some update">
+      <change afterPath="$PROJECT_DIR$/src/implimentaion/ExemplaireImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/implimentaion/LivreImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/DatabaseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/database.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Exemplaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Exemplaire.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Livre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/LivreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/LivreInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +54,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "jdk.selected.JAVA_MODULE": "openjdk-20",
-    "last_opened_file_path": "C:/Users/YC/Desktop/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "onboarding.tips.debug.path": "C:/Users/YC/IdeaProjects/gestion bibliotheque/database/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YC/Desktop/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/YC/IdeaProjects/gestion bibliotheque/database/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\YC\IdeaProjects\gestion bibliotheque\src" />
@@ -92,7 +92,10 @@
       <workItem from="1693574220962" duration="54000" />
       <workItem from="1693574286237" duration="1712000" />
       <workItem from="1693576056896" duration="7525000" />
-      <workItem from="1693656201963" duration="14236000" />
+      <workItem from="1693656201963" duration="14463000" />
+      <workItem from="1693686836317" duration="2538000" />
+      <workItem from="1693740052398" duration="5056000" />
+      <workItem from="1693748098258" duration="1915000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -166,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693663210731</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="some update">
+      <option name="closed" value="true" />
+      <created>1693677544016</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693677544016</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,6 +215,7 @@
     <MESSAGE value="update database class" />
     <MESSAGE value="singlton implementation" />
     <MESSAGE value="add attribut and constructors" />
-    <option name="LAST_COMMIT_MESSAGE" value="add attribut and constructors" />
+    <MESSAGE value="some update" />
+    <option name="LAST_COMMIT_MESSAGE" value="some update" />
   </component>
 </project>

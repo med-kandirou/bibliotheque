@@ -1,10 +1,13 @@
 package interfaces;
+import models.Livre;
+
+import java.sql.SQLException;
 import java.util.List;
 
 public interface LivreInterface {
-    models.Livre ajouter();
-    models.Livre supprimer();
-    models.Livre maj();
-    List<models.Livre> afficher();
-    List<models.Livre> recherche();
+    Livre ajouter(Livre livre) throws SQLException;
+    Livre supprimer(Livre livre);
+    Livre maj(Livre livre);
+    List<Livre> afficher();
+    List<Livre> recherche();
 }

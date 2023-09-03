@@ -39,7 +39,7 @@ public class DatabaseConnection {
             throw new RuntimeException(e);
         }
     }
-    public void close() {
+    public void disconnect() {
         if (this.connect() != null) {
             try {
                 this.connect().close();
