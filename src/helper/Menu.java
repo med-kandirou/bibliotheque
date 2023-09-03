@@ -49,8 +49,6 @@ public class Menu {
                 livre.setTitre(scanner.nextLine());
                 System.out.print("Entrer Auteur: ");
                 livre.setAuteur(scanner.nextLine());
-                System.out.print("Entrer Quantity: ");
-                livre.setQuantite(scanner.nextInt());
                 System.out.print(livreImp.ajouter(livre));
                 this.displayMenu();
                 this.router();

@@ -8,7 +8,6 @@ public class Livre {
     private String isbn;
     private String titre;
     private String auteur;
-    private int quantite;
 
     // Singleton instance
     private static Livre instance;
@@ -16,11 +15,10 @@ public class Livre {
     public Livre(){}
 
     // Private constructor to prevent external instantiation
-    private Livre(String isbn, String titre, String auteur, int quantite) {
+    private Livre(String isbn, String titre, String auteur) {
         this.isbn = isbn;
         this.titre = titre;
         this.auteur = auteur;
-        this.quantite = quantite;
     }
 
     // Public method to get the Singleton instance

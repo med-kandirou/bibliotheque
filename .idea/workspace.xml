@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="some update">
-      <change afterPath="$PROJECT_DIR$/src/implimentaion/ExemplaireImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/implimentaion/LivreImp.java" afterDir="false" />
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="add,delete, display book">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/LivreInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/LivreInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Livre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Livre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +89,7 @@
       <workItem from="1693656201963" duration="14463000" />
       <workItem from="1693686836317" duration="2538000" />
       <workItem from="1693740052398" duration="5056000" />
-      <workItem from="1693748098258" duration="1915000" />
+      <workItem from="1693748098258" duration="3061000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -177,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693677544016</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add,delete, display book">
+      <option name="closed" value="true" />
+      <created>1693750128311</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693750128311</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +218,7 @@
     <MESSAGE value="singlton implementation" />
     <MESSAGE value="add attribut and constructors" />
     <MESSAGE value="some update" />
-    <option name="LAST_COMMIT_MESSAGE" value="some update" />
+    <MESSAGE value="add,delete, display book" />
+    <option name="LAST_COMMIT_MESSAGE" value="add,delete, display book" />
   </component>
 </project>
