@@ -76,12 +76,12 @@ public class Menu {
                     liv.setTitre(newTitre);
                 }
                 System.out.print("Modifier l'auteur (entrer=laisser la valeur initiale) : ");
-                scanner.nextLine();
                 String newAuteur = scanner.nextLine();
                 if (!newAuteur.isEmpty()) {
                     liv.setAuteur(newAuteur);
                 }
-                System.out.print(livreImp.maj(liv));
+                liv=livreImp.maj(liv);
+                System.out.print(liv.getTitre()+" a été bien modifié");
                 break;
             case 4:
                 System.out.println("La liste des livres diponibles :");
