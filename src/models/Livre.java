@@ -49,10 +49,5 @@ public class Livre {
     public void setAuteur(String auteur) {
         this.auteur = auteur;
     }
-    public int getQuantite() {
-        return quantite;
-    }
-    public void setQuantite(int quantite) {
-        this.quantite = quantite;
-    }
+
 }

@@ -61,7 +61,10 @@ public class Menu {
                 this.router();
                 break;
             case 3:
-                System.out.println("Option 3 selected.");
+                System.out.println("Entrer le ISBN du livre a modifier :");
+                livre.setIsbn(scanner.next());
+                Livre liv=livreImp.recherche(livre);
+                System.out.print("Isbn : "+liv.getIsbn()+ "\nTitre :"+liv.getTitre()+ "\nAuteur :"+liv.getAuteur());
                 break;
             case 4:
                 System.out.println("La liste des livres diponibles :");

@@ -9,5 +9,5 @@ public interface LivreInterface {
     Livre supprimer(Livre livre);
     Livre maj(Livre livre);
     List<Livre> afficher();
-    List<Livre> recherche();
+    Livre recherche(Livre livre);
 }

@@ -13,6 +13,7 @@ import java.util.List;
 
 public class LivreImp implements LivreInterface {
     DatabaseConnection DB=DatabaseConnection.getInstance();
+    Livre l = Livre.getInstance();
     @Override
     public Livre ajouter(Livre livre) {
         try {
@@ -22,7 +23,6 @@ public class LivreImp implements LivreInterface {
             preparedStatement.setString(1, livre.getIsbn());
             preparedStatement.setString(2, livre.getTitre());
             preparedStatement.setString(3, livre.getAuteur());
-            preparedStatement.setInt(4, livre.getQuantite());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Livre inséré avec succès.");
@@ -68,10 +68,9 @@ public class LivreImp implements LivreInterface {
     public List<Livre> afficher() {
         List<Livre> livres = new ArrayList<>();
         try {
-            String selectSql = "SELECT * FROM livre";
+            String selectSql = "SELECT l.* FROM livre l INNER JOIN exemplaire e ON l.isbn = e.isbn WHERE e.statut LIKE 'Disponible'";
             PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
             ResultSet resultSet = preparedStatement.executeQuery();
-            Livre l = Livre.getInstance();
             while (resultSet.next()) {
                 l.setIsbn(resultSet.getString("isbn"));
                 l.setTitre(resultSet.getString("titre"));
@@ -89,7 +88,23 @@ public class LivreImp implements LivreInterface {
     }
 
     @Override
-    public List<Livre> recherche() {
-        return null;
+    public Livre recherche(Livre livre) {
+        try {
+            String selectSql = "SELECT * FROM livre WHERE isbn like '"+livre.getIsbn()+"'";
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if(resultSet.next()){
+                l.setIsbn(resultSet.getString("isbn"));
+                l.setTitre(resultSet.getString("titre"));
+                l.setAuteur(resultSet.getString("auteur"));
+            }
+            resultSet.close();
+            preparedStatement.close();
+            DB.disconnect();
+        }
+        catch (SQLException e){
+            System.out.print(e.getMessage());
+        }
+        return l;
     }
 }
