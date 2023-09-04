@@ -17,7 +17,7 @@ public class LivreImp implements LivreInterface {
     @Override
     public Livre ajouter(Livre livre) {
         try {
-            String insertSql = "INSERT INTO livre (isbn, titre,auteur,quantite) VALUES (?, ?,?,?)";
+            String insertSql = "INSERT INTO livre (isbn, titre,auteur) VALUES (?, ?,?)";
             // Create a PreparedStatement
             PreparedStatement preparedStatement = DB.connect().prepareStatement(insertSql);
             preparedStatement.setString(1, livre.getIsbn());
@@ -61,7 +61,25 @@ public class LivreImp implements LivreInterface {
 
     @Override
     public Livre maj(Livre livre) {
-        return null;
+        try {
+            String updatequery = "UPDATE livre SET titre = ?, auteur = ? WHERE isbn = ?;";
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(updatequery);
+            preparedStatement.setString(1, livre.getTitre());
+            preparedStatement.setString(2, livre.getAuteur());
+            preparedStatement.setString(3, livre.getIsbn());
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Livre modifié avec succès.");
+            } else {
+                System.out.println("Aucun livre correspondant à cet ISBN.");
+            }
+            preparedStatement.close();
+            DB.disconnect();
+        }
+        catch (SQLException e){
+            System.out.print(e.getMessage());
+        }
+        return livre;
     }
 
     @Override
@@ -88,9 +106,9 @@ public class LivreImp implements LivreInterface {
     }
 
     @Override
-    public Livre recherche(Livre livre) {
+    public Livre recherche(String isbn) {
         try {
-            String selectSql = "SELECT * FROM livre WHERE isbn like '"+livre.getIsbn()+"'";
+            String selectSql = "SELECT * FROM livre WHERE isbn like '"+isbn+"'";
             PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
             ResultSet resultSet = preparedStatement.executeQuery();
             if(resultSet.next()){

@@ -29,6 +29,10 @@ public class Menu {
         System.out.println("2. Supprimer un livre :");
         System.out.println("3. Mettre ajour un livre :");
         System.out.println("4. Afficher les livres disponibles :");
+        System.out.println("5. ajouter un emprunteur :");
+        System.out.println("6. Emprunter un livre :");
+        System.out.println("7. Stattistique du bibliotheque :");
+        System.out.println("8. Afficher les livres disponibles :");
         System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
     }
@@ -62,9 +66,22 @@ public class Menu {
                 break;
             case 3:
                 System.out.println("Entrer le ISBN du livre a modifier :");
-                livre.setIsbn(scanner.next());
-                Livre liv=livreImp.recherche(livre);
-                System.out.print("Isbn : "+liv.getIsbn()+ "\nTitre :"+liv.getTitre()+ "\nAuteur :"+liv.getAuteur());
+                String isbn=scanner.next();
+                Livre liv=livreImp.recherche(isbn);
+                System.out.print("Isbn : "+liv.getIsbn()+ "\nTitre :"+liv.getTitre()+ "\nAuteur :"+liv.getAuteur()+"\n");
+                System.out.print("Modifier le titre (entrer=laisser la valeur initiale) : ");
+                scanner.nextLine();
+                String newTitre = scanner.nextLine();
+                if (!newTitre.isEmpty()) {
+                    liv.setTitre(newTitre);
+                }
+                System.out.print("Modifier l'auteur (entrer=laisser la valeur initiale) : ");
+                scanner.nextLine();
+                String newAuteur = scanner.nextLine();
+                if (!newAuteur.isEmpty()) {
+                    liv.setAuteur(newAuteur);
+                }
+                System.out.print(livreImp.maj(liv));
                 break;
             case 4:
                 System.out.println("La liste des livres diponibles :");

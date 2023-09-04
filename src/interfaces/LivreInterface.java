@@ -5,9 +5,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface LivreInterface {
-    Livre ajouter(Livre livre) throws SQLException;
+    Livre ajouter(Livre livre);
     Livre supprimer(Livre livre);
     Livre maj(Livre livre);
     List<Livre> afficher();
-    Livre recherche(Livre livre);
+    Livre recherche(String isbn);
 }
