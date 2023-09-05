@@ -1,4 +1,4 @@
-package models;
+package classes;
 
 public class Emprunteur {
     private static Emprunteur instance;  // The single instance of Emprunteur

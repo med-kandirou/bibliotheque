@@ -1,7 +1,7 @@
 package interfaces;
 
 
-import models.Emprunteur;
+import classes.Emprunteur;
 
 public interface EmprunteurInterface {
     Emprunteur ajouter();

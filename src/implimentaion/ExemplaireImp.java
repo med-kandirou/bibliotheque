@@ -1,7 +1,7 @@
 package implimentaion;
 
 import interfaces.ExamplaireInterface;
-import models.Exemplaire;
+import classes.Exemplaire;
 
 
 public class ExemplaireImp implements ExamplaireInterface {

@@ -1,6 +1,6 @@
 package interfaces;
 
-import models.Exemplaire;
+import classes.Exemplaire;
 
 public interface ExamplaireInterface {
     Exemplaire reserver();

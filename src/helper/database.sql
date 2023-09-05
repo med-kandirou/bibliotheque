@@ -1,35 +1,31 @@
 CREATE DATABASE biblio;
-USE biblio;
+\c biblio;
 
 CREATE TABLE livre (
-    isbn VARCHAR(13) PRIMARY KEY,
-    titre VARCHAR(255) NOT NULL,
-    auteur VARCHAR(255),
-    quantite int
+                       isbn VARCHAR(13) PRIMARY KEY,
+                       titre VARCHAR(255) NOT NULL,
+                       auteur VARCHAR(255),
+                       quantite INT
 );
 
 CREATE TABLE exemplaire (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    isbn VARCHAR(13),
-    statut ENUM('disponible', 'emprunté', 'perdu'),
-    FOREIGN KEY (isbn) REFERENCES livre(isbn)
+                            id SERIAL PRIMARY KEY,
+                            isbn VARCHAR(13) REFERENCES livre(isbn) ON UPDATE CASCADE ON DELETE CASCADE,
+                            statut VARCHAR(20) CHECK (statut IN ('disponible', 'emprunté', 'perdu'))
 );
 
 CREATE TABLE emprunteur (
-    Num INT AUTO_INCREMENT PRIMARY KEY,
-    Nom VARCHAR(255),
-    Prenom VARCHAR(255),
-    Email VARCHAR(255),
-    Tele VARCHAR(20)
+                            num SERIAL PRIMARY KEY,
+                            nom VARCHAR(255),
+                            prenom VARCHAR(255),
+                            email VARCHAR(255),
+                            tele VARCHAR(20)
 );
 
 CREATE TABLE emprunt (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    emprunteur_id INT,
-    exemplaire_id INT,
-    date_emprunt DATE,
-    date_retour DATE,
-    FOREIGN KEY (emprunteur_id) REFERENCES emprunteur(Num),
-    FOREIGN KEY (exemplaire_id) REFERENCES exemplaire(id)
+                         id SERIAL PRIMARY KEY,
+                         emprunteur_id INT REFERENCES emprunteur(num) ON UPDATE CASCADE ON DELETE CASCADE,
+                         exemplaire_id INT REFERENCES exemplaire(id) ON UPDATE CASCADE ON DELETE CASCADE,
+                         date_emprunt DATE,
+                         date_retour DATE
 );
-

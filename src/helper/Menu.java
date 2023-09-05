@@ -1,7 +1,7 @@
 package helper;
 
 import implimentaion.LivreImp;
-import models.Livre;
+import classes.Livre;
 
 import java.util.List;
 import java.util.Scanner;
@@ -29,11 +29,9 @@ public class Menu {
         System.out.println("2. Supprimer un livre :");
         System.out.println("3. Mettre ajour un livre :");
         System.out.println("4. Afficher les livres disponibles :");
-        System.out.println("5. ajouter un emprunteur :");
-        System.out.println("6. Emprunter un livre :");
-        System.out.println("7. Stattistique du bibliotheque :");
-        System.out.println("8. Afficher les livres disponibles :");
-        System.out.println("5. Exit");
+        System.out.println("5. Emprunter un livre :");
+        System.out.println("6. Stattistique du bibliotheque :");
+        System.out.println("7. Exit");
         System.out.print("Enter your choice: ");
     }
 
@@ -91,7 +89,14 @@ public class Menu {
                 }
                 break;
             case 5:
-                System.out.println("Exiting the application.");
+                System.out.print("Entrer Le nom Complet : ");
+                livre.setIsbn(scanner.next());
+                System.out.print("Entrer le titre: ");
+                scanner.nextLine();
+                livre.setTitre(scanner.nextLine());
+                System.out.print("Entrer Auteur: ");
+                livre.setAuteur(scanner.nextLine());
+                System.out.print(livreImp.ajouter(livre));
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");

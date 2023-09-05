@@ -1,7 +1,6 @@
 package interfaces;
-import models.Livre;
+import classes.Livre;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface LivreInterface {

@@ -1,8 +1,4 @@
-package models;
-
-import interfaces.LivreInterface;
-
-import java.util.List;
+package classes;
 
 public class Livre {
     private String isbn;
