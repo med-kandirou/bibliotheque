@@ -32,7 +32,7 @@ public class DatabaseConnection {
         String Username = prop.getProperty("DatabaseConnection.username");
         String Password = prop.getProperty("DatabaseConnection.password");
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("org.postgresql.Driver");
             return DriverManager.getConnection(Url, Username, Password);
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
