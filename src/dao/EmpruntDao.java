@@ -27,7 +27,7 @@ public class EmpruntDao implements EmpruntInterface {
             // Create a PreparedStatement
             PreparedStatement preparedStatement = DB.connect().prepareStatement(insertSql);
             preparedStatement.setInt(1, emprunt.getEmprunteur().getNum());
-            preparedStatement.setString(2, emprunt.getExemplaire().getLivre().getIsbn());
+            preparedStatement.setInt(2, emprunt.getExemplaire().getId());
             LocalDate currentDate = LocalDate.now();
             preparedStatement.setDate(3,java.sql.Date.valueOf(currentDate));
             preparedStatement.setDate(4, java.sql.Date.valueOf(emprunt.getDateRetour().toString()));

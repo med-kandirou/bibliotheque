@@ -1,6 +1,10 @@
 package dto;
 
 public class Exemplaire {
+    public void setId(int id) {
+        this.id = id;
+    }
+
     private int id;
     private Statut statut;
     private Livre livre;

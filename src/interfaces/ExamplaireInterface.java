@@ -10,4 +10,6 @@ public interface ExamplaireInterface {
 
     Exemplaire ajouter(Exemplaire exmp);
 
+    List<Exemplaire> getExemplaire();
+
 }

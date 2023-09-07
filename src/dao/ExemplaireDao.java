@@ -1,5 +1,6 @@
 package dao;
 
+import com.mysql.cj.jdbc.MysqlDataSourceFactory;
 import dto.Livre;
 import helper.DatabaseConnection;
 import interfaces.ExamplaireInterface;
@@ -35,6 +36,35 @@ public class ExemplaireDao implements ExamplaireInterface {
             DB.disconnect();
         }
         catch (SQLException e){
+            System.out.print(e.getMessage());
+        }
+        return null;
+    }
+
+
+    @Override
+    public List<Exemplaire> getExemplaire() {
+        List<Exemplaire> exemplaires = new ArrayList<>();
+        try {
+            String selectSql = "SELECT e.*,l.* FROM exemplaire e INNER JOIN livre l ON l.isbn = e.isbn WHERE e.statut LIKE 'disponible';";
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                Exemplaire exmp = new Exemplaire();
+                Livre l=new Livre();
+                l.setIsbn(resultSet.getString("isbn"));
+                l.setTitre(resultSet.getString("titre"));
+                l.setAuteur(resultSet.getString("auteur"));
+                exmp.setId(resultSet.getInt("id"));
+                exmp.setLivre(l);
+                exemplaires.add(exmp);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            DB.disconnect();
+            return exemplaires;
+        }
+        catch (SQLException e) {
             System.out.print(e.getMessage());
         }
         return null;

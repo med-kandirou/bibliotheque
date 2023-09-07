@@ -25,8 +25,6 @@ public class LivreDao implements LivreInterface {
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
                 System.out.println("Livre inséré avec succès.");
-            } else {
-                System.out.println("Aucun enregistrement inséré.");
             }
             preparedStatement.close();
             DB.disconnect();

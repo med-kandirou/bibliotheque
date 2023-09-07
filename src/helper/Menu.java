@@ -33,13 +33,13 @@ public class Menu {
 
     // Display the menu options
     public void displayMenu() {
-        System.out.println("\nMenu:");
+        System.out.println("\n\nMenu:");
         System.out.println("1. Ajouter un livre :");//complet
         System.out.println("2. Supprimer un livre :");//complet
         System.out.println("3. Mettre ajour un livre :");//complet
         System.out.println("4. Afficher les livres disponibles :");//complet
         System.out.println("5. Ajouter un emprunteur :");//complet
-        System.out.println("6. Emprunter un livre :");//incomplet
+        System.out.println("6. Emprunter un livre :");//complet
         System.out.println("7. Ajouter un Exempalire :");//complet
         System.out.println("8. Retourner un livre :");//incomplet
         System.out.println("9. Stattistique du bibliotheque :");//incomplet
@@ -127,13 +127,13 @@ public class Menu {
                 break;
             case 6:
                 System.out.println("La liste des livres diponibles :");
-                List<Livre> ls= livreDao.afficher();
-                for (Livre l : ls){
-                    System.out.print("isbn : "+l.getIsbn() +" titre : " +l.getTitre()+" auteur :" +l.getAuteur()+"\n");
+                List<Exemplaire> exmpls=exemplaireDao.getExemplaire();
+                for (Exemplaire exmp : exmpls){
+                    System.out.print("Num : "+exmp.getId() +" titre : " +exmp.getLivre().getTitre()+" auteur :" +exmp.getLivre().getAuteur()+"\n");
                 }
-                System.out.print("Entrer le Isbn : ");
-                livre.setIsbn(scanner.next());
-                exemplaire.setLivre(livre);
+                System.out.print("Entrer le numero du livre : ");
+                exemplaire.setId(scanner.nextInt());
+
                 emprunt.setExemplaire(exemplaire);
                 System.out.println("La liste des emprunteurs :");
                 List<Emprunteur> emprnts= emprunteurDao.getemprunteur();
