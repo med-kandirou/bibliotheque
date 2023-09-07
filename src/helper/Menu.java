@@ -33,16 +33,16 @@ public class Menu {
 
     // Display the menu options
     public void displayMenu() {
-        System.out.println("Menu:");
-        System.out.println("1. Ajouter un livre :");
-        System.out.println("2. Supprimer un livre :");
-        System.out.println("3. Mettre ajour un livre :");
-        System.out.println("4. Afficher les livres disponibles :");
-        System.out.println("5. Ajouter un emprunteur :");
-        System.out.println("6. Emprunter un livre :");
-        System.out.println("7. Ajouter un Exempalire :");
-        System.out.println("8. Retourner un livre :");
-        System.out.println("9. Stattistique du bibliotheque :");
+        System.out.println("\nMenu:");
+        System.out.println("1. Ajouter un livre :");//complet
+        System.out.println("2. Supprimer un livre :");//complet
+        System.out.println("3. Mettre ajour un livre :");//complet
+        System.out.println("4. Afficher les livres disponibles :");//complet
+        System.out.println("5. Ajouter un emprunteur :");//complet
+        System.out.println("6. Emprunter un livre :");//incomplet
+        System.out.println("7. Ajouter un Exempalire :");//complet
+        System.out.println("8. Retourner un livre :");//incomplet
+        System.out.println("9. Stattistique du bibliotheque :");//incomplet
         System.out.println("10. Exit");
         System.out.print("Enter your choice: ");
     }
@@ -52,11 +52,8 @@ public class Menu {
     LivreDao livreDao =new LivreDao();
     Emprunteur emprunteur = Emprunteur.getInstance();
     EmprunteurDao emprunteurDao = new EmprunteurDao();
-
     Emprunt emprunt = Emprunt.getInstance();
     EmpruntDao empruntDao = new EmpruntDao();
-
-
     Exemplaire exemplaire = Exemplaire.getInstance();
     ExemplaireDao exemplaireDao = new ExemplaireDao();
 
@@ -65,6 +62,8 @@ public class Menu {
     public void router() {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
+
+
         switch (choice) {
             case 1:
                 System.out.print("Entrer ISBN: ");
@@ -75,15 +74,13 @@ public class Menu {
                 System.out.print("Entrer Auteur: ");
                 livre.setAuteur(scanner.nextLine());
                 System.out.print(livreDao.ajouter(livre));
-                this.displayMenu();
-                this.router();
+
                 break;
             case 2:
                 System.out.println("Entrer le ISBN du livre :");
                 livre.setIsbn(scanner.next());
                 System.out.print(livreDao.supprimer(livre));
-                this.displayMenu();
-                this.router();
+
                 break;
             case 3:
                 System.out.println("Entrer le ISBN du livre a modifier :");
@@ -167,6 +164,11 @@ public class Menu {
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
+        }
+        while (choice!=10)
+        {
+            this.displayMenu();
+            this.router();
         }
     }
 }
