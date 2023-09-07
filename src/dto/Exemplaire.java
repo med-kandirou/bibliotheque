@@ -1,9 +1,9 @@
-package classes;
+package dto;
 
 public class Exemplaire {
     private int id;
     private Statut statut;
-    private String isbn;
+    private Livre livre;
 
     public enum Statut { Disponible, Emprunte, Perdu }
 
@@ -11,27 +11,29 @@ public class Exemplaire {
     private static Exemplaire Instance;
 
     // Private constructor to prevent external instantiation
-    private Exemplaire(int id, Statut statut) {
-        this.id = id;
-        this.statut = statut;
+    public Exemplaire() {
+
     }
 
     // Public method to provide access to the single instance (Singleton)
-    public static Exemplaire getInstance(int id, Statut statut) {
+    public static Exemplaire getInstance() {
         if (Instance == null) {
-            Instance = new Exemplaire(id, statut);
+            Instance = new Exemplaire();
         }
         return Instance;
     }
 
-    // Other methods and attributes as needed
-
-    public int getId() {
-        return id;
+    public Livre getLivre() {
+        return livre;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setLivre(Livre livre) {
+        this.livre = livre;
+    }
+
+    // Other methods and attributes as needed
+    public int getId() {
+        return id;
     }
 
     public Statut getStatut() {
@@ -42,11 +44,5 @@ public class Exemplaire {
         this.statut = statut;
     }
 
-    public String getIsbn() {
-        return isbn;
-    }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
 }

@@ -1,5 +1,5 @@
 package interfaces;
-import classes.Livre;
+import dto.Livre;
 
 import java.util.List;
 

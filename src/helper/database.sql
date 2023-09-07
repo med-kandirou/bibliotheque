@@ -29,3 +29,6 @@ CREATE TABLE emprunt (
                          date_emprunt DATE,
                          date_retour DATE
 );
+
+ALTER TABLE your_table_name
+ALTER COLUMN your_column_name SET DEFAULT your_default_value;

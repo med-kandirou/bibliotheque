@@ -1,32 +1,29 @@
-package classes;
+package dto;
 
 public class Emprunteur {
     private static Emprunteur instance;  // The single instance of Emprunteur
+
+
     private int num;
     private String nom;
     private String prenom;
     private String email;
     private String tele;
 
-    // Private constructor to prevent external instantiation
-    private Emprunteur(Integer num, String nom, String prenom, String email, String tele) {
-        this.num = num;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.email = email;
-        this.tele = tele;
-    }
-
     // Public static method to get the instance of Emprunteur
-    public static Emprunteur getInstance(Integer num, String nom, String prenom, String email, String tele) {
+    public static Emprunteur getInstance() {
         if (instance == null) {
-            instance = new Emprunteur(num, nom, prenom, email, tele);
+            instance = new Emprunteur();
         }
         return instance;
     }
 
-    // Getter methods for the attributes
 
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+    // Getter methods for the attributes
     public int getNum() {
         return num;
     }
@@ -45,5 +42,21 @@ public class Emprunteur {
 
     public String getTele() {
         return tele;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTele(String tele) {
+        this.tele = tele;
     }
 }

@@ -1,4 +1,4 @@
-package classes;
+package dto;
 
 public class Livre {
     private String isbn;

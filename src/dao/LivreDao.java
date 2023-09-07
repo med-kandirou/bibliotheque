@@ -1,8 +1,8 @@
-package implimentaion;
+package dao;
 
 import helper.DatabaseConnection;
 import interfaces.LivreInterface;
-import classes.Livre;
+import dto.Livre;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LivreImp implements LivreInterface {
+public class LivreDao implements LivreInterface {
     DatabaseConnection DB=DatabaseConnection.getInstance();
     Livre l = Livre.getInstance();
     @Override
@@ -85,24 +85,26 @@ public class LivreImp implements LivreInterface {
     public List<Livre> afficher() {
         List<Livre> livres = new ArrayList<>();
         try {
-            String selectSql = "SELECT l.* FROM livre l INNER JOIN exemplaire e ON l.isbn = e.isbn WHERE e.statut LIKE 'Disponible'";
+            String selectSql = "SELECT l.* FROM livre l INNER JOIN exemplaire e ON l.isbn = e.isbn WHERE e.statut LIKE 'disponible'";
             PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                l.setIsbn(resultSet.getString("isbn"));
-                l.setTitre(resultSet.getString("titre"));
-                l.setAuteur(resultSet.getString("auteur"));
-                livres.add(l);
+                Livre livre = new Livre();
+                livre.setIsbn(resultSet.getString("isbn"));
+                livre.setTitre(resultSet.getString("titre"));
+                livre.setAuteur(resultSet.getString("auteur"));
+                livres.add(livre);
             }
             resultSet.close();
             preparedStatement.close();
             DB.disconnect();
         }
-        catch (SQLException e){
+        catch (SQLException e) {
             System.out.print(e.getMessage());
         }
         return livres;
     }
+
 
     @Override
     public Livre recherche(String isbn) {

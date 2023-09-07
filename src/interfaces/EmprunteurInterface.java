@@ -1,9 +1,13 @@
 package interfaces;
 
 
-import classes.Emprunteur;
+import dto.Emprunteur;
+
+import java.util.List;
 
 public interface EmprunteurInterface {
-    Emprunteur ajouter();
+
+    List<Emprunteur> getemprunteur();
+    Emprunteur ajouter(Emprunteur emp);
     Emprunteur supprimer();
 }
