@@ -10,6 +10,7 @@ import dto.Exemplaire;
 import dto.Livre;
 
 import java.sql.Date;
+import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
@@ -57,13 +58,10 @@ public class Menu {
     Exemplaire exemplaire =new Exemplaire();
     ExemplaireDao exemplaireDao =ExemplaireDao.getInstance();
 
-
     // Handle user choices
     public void router() {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-
-
         switch (choice) {
             case 1:
                 System.out.print("Entrer ISBN: ");
@@ -160,6 +158,13 @@ public class Menu {
                 exemplaire.setLivre(livre);
                 if(exemplaireDao.ajouter(exemplaire)!=null){
                     System.out.print("Exemplaire bien ajouté");
+                }
+                break;
+            case 8:
+                System.out.println("Entrer le Numero de livre :");
+                exemplaire.setId(scanner.nextInt());
+                if(empruntDao.retourner(exemplaire)!=null){
+                    System.out.println("Livre retourné à bibliothéque");
                 }
                 break;
             default:

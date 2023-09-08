@@ -2,6 +2,7 @@ package dao;
 
 import dto.Emprunt;
 import dto.Emprunteur;
+import dto.Exemplaire;
 import dto.Livre;
 import helper.DatabaseConnection;
 import interfaces.EmpruntInterface;
@@ -46,6 +47,25 @@ public class EmpruntDao implements EmpruntInterface {
             DB.disconnect();
         }
         catch (Exception e){
+            System.out.print(e.getMessage());
+        }
+        return null;
+    }
+
+    @Override
+    public Exemplaire retourner(Exemplaire exmp) {
+        try {
+            String updatequery = "update exemplaire set statut='disponible' where id=?";
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(updatequery);
+            preparedStatement.setInt(1, exmp.getId());
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                return exmp;
+            }
+            preparedStatement.close();
+            DB.disconnect();
+        }
+        catch (SQLException e){
             System.out.print(e.getMessage());
         }
         return null;
