@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-4||-9223372036854775808|c|G
-4||10|c|G
-4||10|C|G
-4||10|T|G</Grants>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
       <ServerVersion>16 rc 1</ServerVersion>
       <StartupTime>1694025934</StartupTime>
       <TimeZones>true ACDT
@@ -808,7 +800,7 @@ false Zulu
 14697||10|C|G
 14697||-9223372036854775808|U|G
 14697||10|U|G</Grants>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4242,9 +4234,9 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>798</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-09-07.11:45:17.254</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-07.10:45:18</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>816</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-09-08.11:18:43.320</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-08.10:18:43</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7620,55 +7612,69 @@ false Zulu
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="510" parent="264" name="emprunt_id_seq">
+    <routine id="510" parent="264" name="updatefunction">
+      <ObjectId>16492</ObjectId>
+      <PgRoutineKind>pg-trigger</PgRoutineKind>
+      <ResultsDefinition>trigger</ResultsDefinition>
+      <Rows>0.0</Rows>
+      <SourceTextLength>90</SourceTextLength>
+      <StateNumber>813</StateNumber>
+      <LanguageName>plpgsql</LanguageName>
+      <OwnerName>postgres</OwnerName>
+    </routine>
+    <sequence id="511" parent="264" name="emprunt_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16474</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <SequenceIdentity>1(3)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>789</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="511" parent="264" name="emprunteur_num_seq">
+    <sequence id="512" parent="264" name="emprunteur_num_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16465</ObjectId>
-      <SequenceIdentity>1(2)</SequenceIdentity>
+      <SequenceIdentity>1(3)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>788</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="512" parent="264" name="exemplaire_id_seq">
+    <sequence id="513" parent="264" name="exemplaire_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16452</ObjectId>
-      <SequenceIdentity>1(6)</SequenceIdentity>
+      <SequenceIdentity>1(10)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>787</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="513" parent="264" name="emprunt">
+    <table id="514" parent="264" name="emprunt">
       <ObjectId>16475</ObjectId>
       <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="514" parent="264" name="emprunteur">
+    <table id="515" parent="264" name="emprunteur">
       <ObjectId>16466</ObjectId>
       <StateNumber>789</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="515" parent="264" name="exemplaire">
+    <table id="516" parent="264" name="exemplaire">
       <ObjectId>16453</ObjectId>
       <StateNumber>787</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="516" parent="264" name="livre">
+    <table id="517" parent="264" name="livre">
       <ObjectId>16445</ObjectId>
       <StateNumber>787</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="517" parent="513" name="id">
+    <argument id="518" parent="510">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DasType>trigger|0s</DasType>
+    </argument>
+    <column id="519" parent="514" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;emprunt_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -7677,31 +7683,31 @@ false Zulu
       <SequenceId>16474</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="518" parent="513" name="emprunteur_id">
+    <column id="520" parent="514" name="emprunteur_id">
       <DasType>integer|0s</DasType>
       <Position>2</Position>
       <StateNumber>789</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="519" parent="513" name="exemplaire_id">
+    <column id="521" parent="514" name="exemplaire_id">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
       <StateNumber>789</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="520" parent="513" name="date_emprunt">
+    <column id="522" parent="514" name="date_emprunt">
       <DasType>date|0s</DasType>
       <Position>4</Position>
       <StateNumber>789</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <column id="521" parent="513" name="date_retour">
+    <column id="523" parent="514" name="date_retour">
       <DasType>date|0s</DasType>
       <Position>5</Position>
       <StateNumber>789</StateNumber>
       <TypeId>1082</TypeId>
     </column>
-    <foreign-key id="522" parent="513" name="emprunt_emprunteur_id_fkey">
+    <foreign-key id="524" parent="514" name="emprunt_emprunteur_id_fkey">
       <ColNames>emprunteur_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16481</ObjectId>
@@ -7711,7 +7717,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16466</RefTableId>
     </foreign-key>
-    <foreign-key id="523" parent="513" name="emprunt_exemplaire_id_fkey">
+    <foreign-key id="525" parent="514" name="emprunt_exemplaire_id_fkey">
       <ColNames>exemplaire_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16486</ObjectId>
@@ -7721,7 +7727,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16453</RefTableId>
     </foreign-key>
-    <index id="524" parent="513" name="emprunt_pkey">
+    <index id="526" parent="514" name="emprunt_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16479</ObjectId>
@@ -7730,14 +7736,21 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="525" parent="513" name="emprunt_pkey">
+    <key id="527" parent="514" name="emprunt_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16480</ObjectId>
       <Primary>1</Primary>
       <StateNumber>789</StateNumber>
       <UnderlyingIndexId>16479</UnderlyingIndexId>
     </key>
-    <column id="526" parent="514" name="num">
+    <trigger id="528" parent="514" name="updatestatut">
+      <Events>I</Events>
+      <ObjectId>16493</ObjectId>
+      <StateNumber>815</StateNumber>
+      <Turn>after-row</Turn>
+      <CallRoutineId>16492</CallRoutineId>
+    </trigger>
+    <column id="529" parent="515" name="num">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;emprunteur_num_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -7746,31 +7759,31 @@ false Zulu
       <SequenceId>16465</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="527" parent="514" name="nom">
+    <column id="530" parent="515" name="nom">
       <DasType>varchar(255)|0s</DasType>
       <Position>2</Position>
       <StateNumber>788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="528" parent="514" name="prenom">
+    <column id="531" parent="515" name="prenom">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
       <StateNumber>788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="529" parent="514" name="email">
+    <column id="532" parent="515" name="email">
       <DasType>varchar(255)|0s</DasType>
       <Position>4</Position>
       <StateNumber>788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="530" parent="514" name="tele">
+    <column id="533" parent="515" name="tele">
       <DasType>varchar(20)|0s</DasType>
       <Position>5</Position>
       <StateNumber>788</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="531" parent="514" name="emprunteur_pkey">
+    <index id="534" parent="515" name="emprunteur_pkey">
       <ColNames>num</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16472</ObjectId>
@@ -7779,20 +7792,20 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="532" parent="514" name="emprunteur_pkey">
+    <key id="535" parent="515" name="emprunteur_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16473</ObjectId>
       <Primary>1</Primary>
       <StateNumber>788</StateNumber>
       <UnderlyingIndexId>16472</UnderlyingIndexId>
     </key>
-    <check id="533" parent="515" name="exemplaire_statut_check">
+    <check id="536" parent="516" name="exemplaire_statut_check">
       <ColNames>statut</ColNames>
       <ObjectId>16457</ObjectId>
       <Predicate>(statut)::text = ANY ((ARRAY[&apos;disponible&apos;::character varying, &apos;emprunté&apos;::character varying, &apos;perdu&apos;::character varying])::text[])</Predicate>
       <StateNumber>787</StateNumber>
     </check>
-    <column id="534" parent="515" name="id">
+    <column id="537" parent="516" name="id">
       <DasType>integer|0s</DasType>
       <DefaultExpression>nextval(&apos;exemplaire_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
@@ -7801,20 +7814,20 @@ false Zulu
       <SequenceId>16452</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="535" parent="515" name="isbn">
+    <column id="538" parent="516" name="isbn">
       <DasType>varchar(13)|0s</DasType>
       <Position>2</Position>
       <StateNumber>787</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="536" parent="515" name="statut">
+    <column id="539" parent="516" name="statut">
       <DasType>varchar(20)|0s</DasType>
       <DefaultExpression>&apos;disponible&apos;::character varying</DefaultExpression>
       <Position>3</Position>
       <StateNumber>797</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <foreign-key id="537" parent="515" name="exemplaire_isbn_fkey">
+    <foreign-key id="540" parent="516" name="exemplaire_isbn_fkey">
       <ColNames>isbn</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16460</ObjectId>
@@ -7824,7 +7837,7 @@ false Zulu
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16445</RefTableId>
     </foreign-key>
-    <index id="538" parent="515" name="exemplaire_pkey">
+    <index id="541" parent="516" name="exemplaire_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16458</ObjectId>
@@ -7833,34 +7846,34 @@ false Zulu
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="539" parent="515" name="exemplaire_pkey">
+    <key id="542" parent="516" name="exemplaire_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16459</ObjectId>
       <Primary>1</Primary>
       <StateNumber>787</StateNumber>
       <UnderlyingIndexId>16458</UnderlyingIndexId>
     </key>
-    <column id="540" parent="516" name="isbn">
+    <column id="543" parent="517" name="isbn">
       <DasType>varchar(13)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="541" parent="516" name="titre">
+    <column id="544" parent="517" name="titre">
       <DasType>varchar(255)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="542" parent="516" name="auteur">
+    <column id="545" parent="517" name="auteur">
       <DasType>varchar(255)|0s</DasType>
       <Position>3</Position>
       <StateNumber>785</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="543" parent="516" name="livre_pkey">
+    <index id="546" parent="517" name="livre_pkey">
       <ColNames>isbn</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16450</ObjectId>
@@ -7872,7 +7885,7 @@ false Zulu
       <CollationIds>100</CollationIds>
       <CollationParentNames>pg_catalog</CollationParentNames>
     </index>
-    <key id="544" parent="516" name="livre_pkey">
+    <key id="547" parent="517" name="livre_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16451</ObjectId>
       <Primary>1</Primary>

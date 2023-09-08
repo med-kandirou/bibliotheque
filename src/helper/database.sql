@@ -32,3 +32,20 @@ CREATE TABLE emprunt (
 
 ALTER TABLE your_table_name
 ALTER COLUMN your_column_name SET DEFAULT your_default_value;
+
+
+
+-- Create a trigger that fires after an insert on the "your_table_name" table
+CREATE TRIGGER updateStatut
+    AFTER INSERT ON emprunt
+    FOR EACH ROW
+    EXECUTE FUNCTION updateFunction();
+
+-- Create an empty function that does nothing
+CREATE OR REPLACE FUNCTION updateFunction()
+    RETURNS TRIGGER AS $$
+BEGIN
+update exemplaire set statut='emprunté' where id=new.id;
+RETURN NULL;
+END;
+$$ LANGUAGE plpgsql;

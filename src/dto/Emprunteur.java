@@ -1,22 +1,13 @@
 package dto;
 
 public class Emprunteur {
-    private static Emprunteur instance;  // The single instance of Emprunteur
-
 
     private int num;
     private String nom;
     private String prenom;
     private String email;
     private String tele;
-
     // Public static method to get the instance of Emprunteur
-    public static Emprunteur getInstance() {
-        if (instance == null) {
-            instance = new Emprunteur();
-        }
-        return instance;
-    }
 
 
     public void setNum(int num) {

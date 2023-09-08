@@ -20,6 +20,13 @@ public class EmpruntDao implements EmpruntInterface {
     public EmpruntDao() {
     }
 
+    private static EmpruntDao instance;
+    public static EmpruntDao getInstance() {
+        if (instance == null) {
+            instance = new EmpruntDao();
+        }
+        return instance;
+    }
     @Override
     public Emprunt reserver(Emprunt emprunt) {
         try {

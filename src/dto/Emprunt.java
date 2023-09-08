@@ -42,13 +42,7 @@ public class Emprunt {
         this.emprunteur = emprunteur;
     }
 
-    private static Emprunt Instance;
     public Emprunt() {}
 
-    public static Emprunt getInstance() {
-        if (Instance == null) {
-            Instance = new Emprunt();
-        }
-        return Instance;
-    }
+
 }

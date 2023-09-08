@@ -16,6 +16,14 @@ import java.util.List;
 public class ExemplaireDao implements ExamplaireInterface {
 
     DatabaseConnection DB=DatabaseConnection.getInstance();
+
+    private static ExemplaireDao instance;
+    public static ExemplaireDao getInstance() {
+        if (instance == null) {
+            instance = new ExemplaireDao();
+        }
+        return instance;
+    }
     @Override
     public Exemplaire reserver() {
         return null;

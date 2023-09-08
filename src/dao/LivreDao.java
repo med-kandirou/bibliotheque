@@ -12,7 +12,15 @@ import java.util.List;
 
 public class LivreDao implements LivreInterface {
     DatabaseConnection DB=DatabaseConnection.getInstance();
-    Livre l = Livre.getInstance();
+
+    private static LivreDao instance;
+    public static LivreDao getInstance() {
+        if (instance == null) {
+            instance = new LivreDao();
+        }
+        return instance;
+    }
+    Livre l = new Livre();
     @Override
     public Livre ajouter(Livre livre) {
         try {

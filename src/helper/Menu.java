@@ -48,14 +48,14 @@ public class Menu {
     }
 
 
-    Livre livre = Livre.getInstance();
-    LivreDao livreDao =new LivreDao();
-    Emprunteur emprunteur = Emprunteur.getInstance();
-    EmprunteurDao emprunteurDao = new EmprunteurDao();
-    Emprunt emprunt = Emprunt.getInstance();
-    EmpruntDao empruntDao = new EmpruntDao();
-    Exemplaire exemplaire = Exemplaire.getInstance();
-    ExemplaireDao exemplaireDao = new ExemplaireDao();
+    Livre livre = new Livre();
+    LivreDao livreDao =LivreDao.getInstance();
+    Emprunteur emprunteur = new Emprunteur();
+    EmprunteurDao emprunteurDao =EmprunteurDao.getInstance();
+    Emprunt emprunt =new Emprunt();
+    EmpruntDao empruntDao =EmpruntDao.getInstance();
+    Exemplaire exemplaire =new Exemplaire();
+    ExemplaireDao exemplaireDao =ExemplaireDao.getInstance();
 
 
     // Handle user choices

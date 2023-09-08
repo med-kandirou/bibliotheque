@@ -6,24 +6,8 @@ public class Livre {
     private String auteur;
 
     // Singleton instance
-    private static Livre instance;
 
     public Livre(){}
-
-    // Private constructor to prevent external instantiation
-    private Livre(String isbn, String titre, String auteur) {
-        this.isbn = isbn;
-        this.titre = titre;
-        this.auteur = auteur;
-    }
-
-    // Public method to get the Singleton instance
-    public static Livre getInstance() {
-        if (instance == null) {
-            instance = new Livre();
-        }
-        return instance;
-    }
 
     // Getters and setters for other attributes
     public String getIsbn() {

@@ -11,20 +11,9 @@ public class Exemplaire {
 
     public enum Statut { Disponible, Emprunte, Perdu }
 
-    // Private static instance variable to hold the single instance of Exemplaire
-    private static Exemplaire Instance;
-
-    // Private constructor to prevent external instantiation
+    // public constructor to prevent external instantiation
     public Exemplaire() {
 
-    }
-
-    // Public method to provide access to the single instance (Singleton)
-    public static Exemplaire getInstance() {
-        if (Instance == null) {
-            Instance = new Exemplaire();
-        }
-        return Instance;
     }
 
     public Livre getLivre() {

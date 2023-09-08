@@ -15,7 +15,15 @@ public class EmprunteurDao implements EmprunteurInterface {
 
     DatabaseConnection DB=DatabaseConnection.getInstance();
 
-    Emprunteur emp=Emprunteur.getInstance();
+    Emprunteur emp=new Emprunteur();
+
+    private static EmprunteurDao instance;
+    public static EmprunteurDao getInstance() {
+        if (instance == null) {
+            instance = new EmprunteurDao();
+        }
+        return instance;
+    }
     @Override
     public List<Emprunteur> getemprunteur() {
         List<Emprunteur> emprntrs = new ArrayList<>();
