@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.49">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>816</IntrospectionStateNumber>
+      <IntrospectionStateNumber>827</IntrospectionStateNumber>
       <ServerVersion>16 rc 1</ServerVersion>
       <StartupTime>1694025934</StartupTime>
       <TimeZones>true ACDT
@@ -800,7 +800,7 @@ false Zulu
 14697||10|C|G
 14697||-9223372036854775808|U|G
 14697||10|U|G</Grants>
-      <IntrospectionStateNumber>816</IntrospectionStateNumber>
+      <IntrospectionStateNumber>827</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4234,9 +4234,9 @@ false Zulu
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>816</IntrospectionStateNumber>
-      <IntrospectionTimestamp>2023-09-08.11:18:43.320</IntrospectionTimestamp>
-      <LocalIntrospectionTimestamp>2023-09-08.10:18:43</LocalIntrospectionTimestamp>
+      <IntrospectionStateNumber>827</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2023-09-08.12:12:52.952</IntrospectionTimestamp>
+      <LocalIntrospectionTimestamp>2023-09-08.11:12:53</LocalIntrospectionTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -7613,19 +7613,19 @@ false Zulu
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <routine id="510" parent="264" name="updatefunction">
-      <ObjectId>16492</ObjectId>
+      <ObjectId>16494</ObjectId>
       <PgRoutineKind>pg-trigger</PgRoutineKind>
       <ResultsDefinition>trigger</ResultsDefinition>
       <Rows>0.0</Rows>
-      <SourceTextLength>90</SourceTextLength>
-      <StateNumber>813</StateNumber>
+      <SourceTextLength>101</SourceTextLength>
+      <StateNumber>823</StateNumber>
       <LanguageName>plpgsql</LanguageName>
       <OwnerName>postgres</OwnerName>
     </routine>
     <sequence id="511" parent="264" name="emprunt_id_seq">
       <DasType>integer|0s</DasType>
       <ObjectId>16474</ObjectId>
-      <SequenceIdentity>1(3)</SequenceIdentity>
+      <SequenceIdentity>1(4)</SequenceIdentity>
       <StartValue>1</StartValue>
       <StateNumber>789</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -7745,10 +7745,10 @@ false Zulu
     </key>
     <trigger id="528" parent="514" name="updatestatut">
       <Events>I</Events>
-      <ObjectId>16493</ObjectId>
-      <StateNumber>815</StateNumber>
+      <ObjectId>16495</ObjectId>
+      <StateNumber>825</StateNumber>
       <Turn>after-row</Turn>
-      <CallRoutineId>16492</CallRoutineId>
+      <CallRoutineId>16494</CallRoutineId>
     </trigger>
     <column id="529" parent="515" name="num">
       <DasType>integer|0s</DasType>

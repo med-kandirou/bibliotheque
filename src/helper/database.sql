@@ -45,7 +45,7 @@ CREATE TRIGGER updateStatut
 CREATE OR REPLACE FUNCTION updateFunction()
     RETURNS TRIGGER AS $$
 BEGIN
-update exemplaire set statut='emprunté' where id=new.id;
+update exemplaire set statut='emprunté' where id=NEW.exemplaire_id;
 RETURN NULL;
 END;
 $$ LANGUAGE plpgsql;
