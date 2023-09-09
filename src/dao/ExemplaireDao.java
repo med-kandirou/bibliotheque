@@ -89,13 +89,11 @@ public class ExemplaireDao implements ExamplaireInterface {
 
             PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
             ResultSet resultSet = preparedStatement.executeQuery();
-
             if (resultSet.next()) {
                 totals.add(resultSet.getInt("total_dispo"));
                 totals.add(resultSet.getInt("total_emprunte"));
                 totals.add(resultSet.getInt("total_perdu"));
             }
-
             resultSet.close();
             preparedStatement.close();
             DB.disconnect();
