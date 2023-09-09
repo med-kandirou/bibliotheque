@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interfaces/ExamplaireInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/ExamplaireInterface.java" afterDir="false" />
-    </list>
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="add stats" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +111,7 @@
       <workItem from="1693929971653" duration="291000" />
       <workItem from="1693931730871" duration="1109000" />
       <workItem from="1693990584437" duration="10755000" />
-      <workItem from="1694075741565" duration="31341000" />
+      <workItem from="1694075741565" duration="31736000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -310,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694182268587</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add stats">
+      <option name="closed" value="true" />
+      <created>1694264529583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1694264529583</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,6 +363,7 @@
     <MESSAGE value="update trigger" />
     <MESSAGE value="return book" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="add stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="add stats" />
   </component>
 </project>
