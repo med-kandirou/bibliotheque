@@ -78,5 +78,35 @@ public class ExemplaireDao implements ExamplaireInterface {
         return null;
     }
 
+    @Override
+    public ArrayList<Integer> stats() {
+        ArrayList<Integer> totals = new ArrayList<>();
+        try {
+            String selectSql = "SELECT " +
+                    "(SELECT COUNT(*) FROM exemplaire WHERE statut LIKE 'disponible') AS total_dispo, " +
+                    "(SELECT COUNT(*) FROM exemplaire WHERE statut LIKE 'emprunté') AS total_emprunte, " +
+                    "(SELECT COUNT(*) FROM exemplaire WHERE statut LIKE 'perdu') AS total_perdu";
+
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                totals.add(resultSet.getInt("total_dispo"));
+                totals.add(resultSet.getInt("total_emprunte"));
+                totals.add(resultSet.getInt("total_perdu"));
+            }
+
+            resultSet.close();
+            preparedStatement.close();
+            DB.disconnect();
+
+            return totals;
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return null;
+    }
+
+
 
 }

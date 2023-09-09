@@ -13,6 +13,7 @@ import java.sql.Date;
 import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -166,6 +167,13 @@ public class Menu {
                 if(empruntDao.retourner(exemplaire)!=null){
                     System.out.println("Livre retourné à bibliothéque");
                 }
+                break;
+            case 9:
+                System.out.println("-----Les statiqstiques du bibliothéque-----");
+                ArrayList<Integer> stats=exemplaireDao.stats();
+                System.out.println("Les livres disponibles : "+stats.get(0));
+                System.out.println("Les livres empruntée : "+stats.get(1));
+                System.out.println("Les livres perdus : "+stats.get(2));
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
