@@ -170,8 +170,9 @@ public class Menu {
                 }
                 break;
             case 9:
-                System.out.println("Rechercher un livre : ");
-                String searchWord=scanner.next();
+                System.out.println("Rechercher un livre par titre ou auteur: ");
+                scanner.nextLine();
+                String searchWord=scanner.nextLine();
                 List<Livre> listLivre=livreDao.recherchemultiple(searchWord);
                 for (Livre l : listLivre){
                     System.out.print("isbn : "+l.getIsbn() +" titre : " +l.getTitre()+" auteur :" +l.getAuteur()+"\n");
