@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ExamplaireInterface {
-    Exemplaire reserver();
-
     Exemplaire ajouter(Exemplaire exmp);
 
     List<Exemplaire> getExemplaire();

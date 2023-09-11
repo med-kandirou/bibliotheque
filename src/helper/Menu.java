@@ -43,9 +43,10 @@ public class Menu {
         System.out.println("5. Ajouter un emprunteur :");//complet
         System.out.println("6. Emprunter un livre :");//complet
         System.out.println("7. Ajouter un Exempalire :");//complet
-        System.out.println("8. Retourner un livre :");//incomplet
-        System.out.println("9. Stattistique du bibliotheque :");//incomplet
-        System.out.println("10. Exit");
+        System.out.println("8. Retourner un livre :");//complet
+        System.out.println("9. Rechercher un livre :");//complet
+        System.out.println("10. Stattistique du bibliotheque :");//complet
+        System.out.println("11. Exit");
         System.out.print("Enter your choice: ");
     }
 
@@ -169,11 +170,20 @@ public class Menu {
                 }
                 break;
             case 9:
+                System.out.println("Rechercher un livre : ");
+                String searchWord=scanner.next();
+                List<Livre> listLivre=livreDao.recherchemultiple(searchWord);
+                for (Livre l : listLivre){
+                    System.out.print("isbn : "+l.getIsbn() +" titre : " +l.getTitre()+" auteur :" +l.getAuteur()+"\n");
+                }
+                break;
+            case 10:
                 System.out.println("-----Les statiqstiques du bibliothéque-----");
                 ArrayList<Integer> stats=exemplaireDao.stats();
-                System.out.println("Les livres disponibles : "+stats.get(0));
-                System.out.println("Les livres empruntée : "+stats.get(1));
-                System.out.println("Les livres perdus : "+stats.get(2));
+                System.out.println("Le nombre des livres disponibles : "+stats.get(0));
+                System.out.println("Les livres disponibles : "+stats.get(1));
+                System.out.println("Les livres empruntée : "+stats.get(2));
+                System.out.println("Les livres perdus : "+stats.get(3));
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");

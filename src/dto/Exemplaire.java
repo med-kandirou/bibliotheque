@@ -13,23 +13,17 @@ public class Exemplaire {
     public Livre getLivre() {
         return livre;
     }
-
     public void setLivre(Livre livre) {
         this.livre = livre;
     }
-
     // Other methods and attributes as needed
     public int getId() {
         return id;
     }
-
     public Statut getStatut() {
         return statut;
     }
-
     public void setStatut(Statut statut) {
         this.statut = statut;
     }
-
-
 }

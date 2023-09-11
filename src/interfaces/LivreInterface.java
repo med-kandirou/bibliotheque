@@ -9,4 +9,5 @@ public interface LivreInterface {
     Livre maj(Livre livre);
     List<Livre> afficher();
     Livre recherche(String isbn);
+    List<Livre> recherchemultiple(String searchword);
 }

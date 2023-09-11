@@ -126,10 +126,36 @@ public class LivreDao implements LivreInterface {
             resultSet.close();
             preparedStatement.close();
             DB.disconnect();
+            return l;
         }
         catch (SQLException e){
             System.out.print(e.getMessage());
         }
-        return l;
+        return null;
+    }
+
+    @Override
+    public List<Livre> recherchemultiple(String searchword) {
+        List<Livre> listLivre=new ArrayList<>();
+        try {
+            String selectSql = "SELECT * FROM livre WHERE titre like '"+searchword+"' OR auteur like '"+searchword+"';";
+            PreparedStatement preparedStatement = DB.connect().prepareStatement(selectSql);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()){
+                Livre livre=new Livre();
+                livre.setIsbn(resultSet.getString("isbn"));
+                livre.setTitre(resultSet.getString("titre"));
+                livre.setAuteur(resultSet.getString("auteur"));
+                listLivre.add(livre);
+            }
+            resultSet.close();
+            preparedStatement.close();
+            DB.disconnect();
+            return listLivre;
+        }
+        catch (SQLException e){
+            System.out.print(e.getMessage());
+        }
+        return null;
     }
 }
