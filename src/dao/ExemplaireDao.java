@@ -45,7 +45,6 @@ public class ExemplaireDao implements ExamplaireInterface {
         return null;
     }
 
-
     @Override
     public List<Exemplaire> getExemplaire() {
         List<Exemplaire> exemplaires = new ArrayList<>();
@@ -94,7 +93,6 @@ public class ExemplaireDao implements ExamplaireInterface {
             resultSet.close();
             preparedStatement.close();
             DB.disconnect();
-
             return totals;
         } catch (SQLException e) {
             System.out.println(e.getMessage());

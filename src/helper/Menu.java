@@ -73,14 +73,18 @@ public class Menu {
                 livre.setTitre(scanner.nextLine());
                 System.out.print("Entrer Auteur: ");
                 livre.setAuteur(scanner.nextLine());
-                System.out.print(livreDao.ajouter(livre));
-
+                livre=livreDao.ajouter(livre);
+                if(livre!=null){
+                    System.out.print(livre.getTitre()+" a été bien ajouté");
+                }
                 break;
             case 2:
                 System.out.println("Entrer le ISBN du livre :");
                 livre.setIsbn(scanner.next());
-                System.out.print(livreDao.supprimer(livre));
-
+                livre=livreDao.supprimer(livre);
+                if(livre!=null){
+                    System.out.print(livre.getTitre()+" a été bien supprimé");
+                }
                 break;
             case 3:
                 System.out.println("Entrer le ISBN du livre a modifier :");
@@ -99,7 +103,9 @@ public class Menu {
                     liv.setAuteur(newAuteur);
                 }
                 liv= livreDao.maj(liv);
-                System.out.print(liv.getTitre()+" a été bien modifié");
+                if(liv!=null){
+                    System.out.print(liv.getTitre()+" a été bien modifié");
+                }
                 break;
             case 4:
                 System.out.println("La liste des livres diponibles :");

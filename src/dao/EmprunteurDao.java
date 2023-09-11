@@ -16,7 +16,6 @@ public class EmprunteurDao implements EmprunteurInterface {
     DatabaseConnection DB=DatabaseConnection.getInstance();
 
     Emprunteur emp=new Emprunteur();
-
     private static EmprunteurDao instance;
     public static EmprunteurDao getInstance() {
         if (instance == null) {

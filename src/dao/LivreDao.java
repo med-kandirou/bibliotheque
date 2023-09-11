@@ -32,7 +32,7 @@ public class LivreDao implements LivreInterface {
             preparedStatement.setString(3, livre.getAuteur());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("Livre inséré avec succès.");
+                return livre;
             }
             preparedStatement.close();
             DB.disconnect();
@@ -40,7 +40,7 @@ public class LivreDao implements LivreInterface {
         catch (SQLException e){
             System.out.print(e.getMessage());
         }
-        return livre;
+        return null;
     }
 
     @Override
@@ -51,9 +51,7 @@ public class LivreDao implements LivreInterface {
             preparedStatement.setString(1, livre.getIsbn());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("Livre supprimé avec succès.");
-            } else {
-                System.out.println("Aucun livre correspondant à cet ISBN.");
+                return livre;
             }
             preparedStatement.close();
             DB.disconnect();
@@ -61,7 +59,7 @@ public class LivreDao implements LivreInterface {
         catch (SQLException e){
             System.out.print(e.getMessage());
         }
-        return livre;
+        return null;
     }
 
     @Override
@@ -74,9 +72,7 @@ public class LivreDao implements LivreInterface {
             preparedStatement.setString(3, livre.getIsbn());
             int rowsAffected = preparedStatement.executeUpdate();
             if (rowsAffected > 0) {
-                System.out.println("Livre modifié avec succès.");
-            } else {
-                System.out.println("Aucun livre correspondant à cet ISBN.");
+                return livre;
             }
             preparedStatement.close();
             DB.disconnect();
@@ -84,7 +80,7 @@ public class LivreDao implements LivreInterface {
         catch (SQLException e){
             System.out.print(e.getMessage());
         }
-        return livre;
+        return null;
     }
 
     @Override

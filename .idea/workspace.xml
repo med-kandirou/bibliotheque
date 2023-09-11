@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="add serach multiple">
+    <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="update serach multiple">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/EmprunteurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/EmprunteurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/LivreDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/LivreDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
     </list>
@@ -117,7 +119,7 @@
       <workItem from="1693931730871" duration="1109000" />
       <workItem from="1693990584437" duration="10755000" />
       <workItem from="1694075741565" duration="32434000" />
-      <workItem from="1694267236331" duration="10227000" />
+      <workItem from="1694267236331" duration="13144000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -343,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694429432445</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="update serach multiple">
+      <option name="closed" value="true" />
+      <created>1694431109753</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1694431109753</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,6 +406,7 @@
     <MESSAGE value="update" />
     <MESSAGE value="add enum" />
     <MESSAGE value="add serach multiple" />
-    <option name="LAST_COMMIT_MESSAGE" value="add serach multiple" />
+    <MESSAGE value="update serach multiple" />
+    <option name="LAST_COMMIT_MESSAGE" value="update serach multiple" />
   </component>
 </project>
