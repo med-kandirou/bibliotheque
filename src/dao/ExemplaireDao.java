@@ -100,6 +100,4 @@ public class ExemplaireDao implements ExamplaireInterface {
         return null;
     }
 
-
-
 }
