@@ -1,11 +1,9 @@
 package dao;
 
-import com.mysql.cj.jdbc.MysqlDataSourceFactory;
 import dto.Livre;
 import helper.DatabaseConnection;
 import interfaces.ExamplaireInterface;
 import dto.Exemplaire;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

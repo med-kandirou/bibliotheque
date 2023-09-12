@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d3c09ec3-b172-47db-944e-b38a16f4fe9a" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/EmprunteurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/EmprunteurDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/ExemplaireDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helper/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helper/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +118,7 @@
       <workItem from="1693931730871" duration="1109000" />
       <workItem from="1693990584437" duration="10755000" />
       <workItem from="1694075741565" duration="32434000" />
-      <workItem from="1694267236331" duration="13659000" />
+      <workItem from="1694267236331" duration="23795000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -358,7 +360,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694439743184</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update">
+      <option name="closed" value="true" />
+      <created>1694440495814</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1694440495814</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

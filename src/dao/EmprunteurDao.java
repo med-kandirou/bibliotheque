@@ -35,8 +35,8 @@ public class EmprunteurDao implements EmprunteurInterface {
                 instace.setNum(resultSet.getInt("num"));
                 instace.setNom(resultSet.getString("nom"));
                 instace.setPrenom(resultSet.getString("prenom"));
-                instace.setPrenom(resultSet.getString("email"));
-                instace.setPrenom(resultSet.getString("tele"));
+                instace.setEmail(resultSet.getString("email"));
+                instace.setTele(resultSet.getString("tele"));
                 emprntrs.add(instace);
             }
             resultSet.close();

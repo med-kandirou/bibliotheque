@@ -45,7 +45,7 @@ public class Menu {
         System.out.println("7. Ajouter un Exempalire :");//complet
         System.out.println("8. Retourner un livre :");//complet
         System.out.println("9. Rechercher un livre :");//complet
-        System.out.println("10. Stattistique du bibliotheque :");//complet
+        System.out.println("10. Statistique du bibliotheque :");//complet
         System.out.println("11. Exit");
         System.out.print("Enter your choice: ");
     }
@@ -80,10 +80,11 @@ public class Menu {
                 break;
             case 2:
                 System.out.println("Entrer le ISBN du livre :");
-                livre.setIsbn(scanner.next());
+                scanner.nextLine();
+                livre.setIsbn(scanner.nextLine());
                 livre=livreDao.supprimer(livre);
                 if(livre!=null){
-                    System.out.print(livre.getTitre()+" a été bien supprimé");
+                        System.out.print("Le livre a été bien supprimé");
                 }
                 break;
             case 3:
